@@ -34,3 +34,18 @@ spring:
             - Path=/api/customer/**
           filters:
             - StripPrefix=2
+            
+ ---     
+ spring:
+   config:
+     activate:
+       on-profile: tls
+server:
+  ssl:
+    key-alias: api-gateway-cert
+    key-store-type: AzureKeyVault
+    trust-store-type: AzureKeyVault
+  port: 8443
+azure:
+  keyvault:
+    uri: https://asa-mz-cqngc-eus-kv.vault.azure.net/
