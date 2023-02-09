@@ -35,8 +35,8 @@ spring:
           filters:
             - StripPrefix=2
             
- ---     
- spring:
+---
+spring:
    config:
      activate:
        on-profile: tls
