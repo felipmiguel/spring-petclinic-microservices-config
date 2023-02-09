@@ -143,10 +143,8 @@ spring:
 
 server:
   ssl:
-    key-alias: api-gateway-cert
     key-store-type: AzureKeyVault
     trust-store-type: AzureKeyVault
-  port: 8443
 
 azure:
   keyvault:
