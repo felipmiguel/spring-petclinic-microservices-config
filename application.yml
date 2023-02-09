@@ -134,3 +134,20 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://discovery-server:8761/eureka/
+
+---
+spring:
+  config:
+    activate:
+      on-profile: tls
+
+server:
+  ssl:
+    key-alias: api-gateway-cert
+    key-store-type: AzureKeyVault
+    trust-store-type: AzureKeyVault
+  port: 8443
+
+azure:
+  keyvault:
+    uri: https://asa-mz-cqngc-eus-kv.vault.azure.net/
